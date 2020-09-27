@@ -1,0 +1,24 @@
+{
+  "name": "frontend-rockquest",
+  "version": "1.0.0",
+  "description": "Frontend para la creacion y administracion de una aplicacion",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RockQuestWeb/FrontEnd-RockQuest.git"
+  },
+  "keywords": [
+    "frontend",
+    "Rock",
+    "Quest"
+  ],
+  "author": "Freddy Santiago Patarroyo Fernandez, Johan Nicolas Soler Hernandez, Danny Jersson Ochoa Peralta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RockQuestWeb/FrontEnd-RockQuest/issues"
+  },
+  "homepage": "https://github.com/RockQuestWeb/FrontEnd-RockQuest#readme"
+}

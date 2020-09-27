@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegistryComponent } from './registry/registry.component';
 import {CardModule} from 'primeng/card';
+import {InputTextModule} from 'primeng/inputtext';
+import {PasswordModule} from 'primeng/password';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import {CardModule} from 'primeng/card';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    CardModule
+    CardModule,
+    InputTextModule,
+    PasswordModule
   ],
   providers: [],
   bootstrap: [AppComponent]

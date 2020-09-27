@@ -1,0 +1,16 @@
+<p-card header="Ciudades" [style]="{ 'margin-left':'auto','margin-right':'auto'}">
+    <span class="p-float-label" [style]="{'margin-bottom': '2em', 'margin-left':'auto','margin-right':'auto'}">
+        <input id="float-input" type="text" pInputText > 
+        <label for="float-input">Creador</label>
+    </span>
+
+    <span class="p-float-label" [style]="{'margin-bottom': '2em', 'margin-left':'auto','margin-right':'auto'}">
+        <input id="float-input" type="text" pInputText> 
+        <label for="float-input">Titulo o Nombre Ciudad</label>
+    </span>
+
+    <span class="p-float-label" [style]="{'margin-bottom': '2em', 'margin-left':'auto','margin-right':'auto'}">
+        <p-dropdown [options]="cities" [(ngModel)]="selectedCity1" placeholder="Select a City" optionLabel="name" [showClear]="true"></p-dropdown>
+    </span>
+
+</p-card>

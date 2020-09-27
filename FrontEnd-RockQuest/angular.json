@@ -122,6 +122,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "FrontEnd-RockQuest"
+    }
+  },
+  "defaultProject": "FrontEnd-RockQuest",
+  "cli": {
+    "analytics": "1f22624f-8ea5-4b55-b26f-2ac4aa0e37d8"
+  }
 }

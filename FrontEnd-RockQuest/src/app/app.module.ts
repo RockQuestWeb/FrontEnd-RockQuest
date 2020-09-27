@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegistryComponent } from './registry/registry.component';
+import {CardModule} from 'primeng/card';
 
 @NgModule({
   declarations: [
@@ -12,7 +14,9 @@ import { RegistryComponent } from './registry/registry.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

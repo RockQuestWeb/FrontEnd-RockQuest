@@ -29,6 +29,18 @@
     width: 100%;
 }
 
+.mat-card-content .aceptar button{
+    width: 100%;
+    background: darkcyan;
+    color: #000;
+    padding: 15px;
+}
+
+.mat-card-content .aceptar button:hover{
+    background: aquamarine;
+    padding: 18px;
+}
+
 @media screen and (max-width:1263px){
     .mat-card{
         width: 50%;

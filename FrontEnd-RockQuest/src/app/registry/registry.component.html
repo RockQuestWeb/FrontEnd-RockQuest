@@ -34,7 +34,7 @@
             <mat-form-field appearance="fill">
                 <mat-label>codigo universitario</mat-label>
                 <input matInput type="number" [formControl]="codeU" required>
-                <mat-error *ngIf="email.invalid">{{getErrorMessageCodeU()}}</mat-error>
+                <mat-error *ngIf="codeU.invalid">{{getErrorMessageCodeu()}}</mat-error>
             </mat-form-field>
           </div>
     </mat-card-content>

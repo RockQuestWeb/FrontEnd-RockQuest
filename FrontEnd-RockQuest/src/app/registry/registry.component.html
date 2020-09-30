@@ -6,17 +6,19 @@
         <div>
             <mat-form-field appearance="fill">
                 <mat-label>nombre</mat-label>
-                <input matInput>
+                <input matInput [formControl]="name" required>
+                <mat-error *ngIf="password.invalid">{{getErrorMessageName()}}</mat-error>
             </mat-form-field>
           </div>
           <hr>
           <div>
             <mat-form-field appearance="fill">
                 <mat-label>contraseña</mat-label>
-                <input matInput [type]="hide ? 'password' : 'text'" required>
+                <input matInput [type]="hide ? 'password' : 'text'" [formControl]="password" required>
                 <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                 <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                 </button>
+                <mat-error *ngIf="password.invalid">{{getErrorMessagePassword()}}</mat-error>
               </mat-form-field>
           </div>
           <hr>
@@ -24,8 +26,16 @@
             <mat-form-field appearance="fill">
                 <mat-label>email</mat-label>
                 <input matInput placeholder="pat@example.com" [formControl]="email" required>
-                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                <mat-error *ngIf="email.invalid">{{getErrorMessageEmail()}}</mat-error>
               </mat-form-field>
+          </div>
+          <hr>
+          <div>
+            <mat-form-field appearance="fill">
+                <mat-label>codigo universitario</mat-label>
+                <input matInput type="number" [formControl]="codeU" required>
+                <mat-error *ngIf="email.invalid">{{getErrorMessageCodeU()}}</mat-error>
+            </mat-form-field>
           </div>
     </mat-card-content>
 </mat-card>

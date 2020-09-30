@@ -11,12 +11,32 @@ export class RegistryComponent implements OnInit {
 
   email = new FormControl('', [Validators.required, Validators.email]);
 
-  getErrorMessage() {
+  password = new FormControl('', [Validators.required]);
+
+  name = new FormControl('', [Validators.required]);
+
+  codeU = new FormControl('', [Validators.required]);
+
+  getErrorMessageEmail() {
     if (this.email.hasError('required')) {
-      return 'llenar este componente';
+      return 'componente obligatorio';
     }
-    return this.email.hasError('email') ? 'Not a valid email' : '';
+   
+    return this.email.hasError('email') ? 'email no valido verifica @ ':'';
   }
+
+  getErrorMessagePassword() {
+      return this.password.hasError('required') ? 'componente obligatorio' : '';
+  }
+
+  getErrorMessageName() {
+    return this.name.hasError('required') ? 'componente obligatorio' : '';
+  }
+
+  getErrorMessageCodeu() {
+    return this.codeU.hasError('required') ? 'componente obligatorio' : '';
+  }
+
 /*___________________________________________________________________________________________ */
   constructor() { }
 

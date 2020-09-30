@@ -29,3 +29,18 @@
     width: 100%;
 }
 
+@media screen and (max-width:1263px){
+    .mat-card{
+        width: 50%;
+        margin: 20px auto;
+    
+    }
+}
+
+@media screen and (max-width:600px){
+    .mat-card{
+        width: 90%;
+        margin: 20px auto;
+    
+    }
+}

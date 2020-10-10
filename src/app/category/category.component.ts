@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-category',
@@ -7,6 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoryComponent implements OnInit {
 
+  title = new FormControl('', [Validators.required]);
+
+  getErrorMessageTitulo() {
+    return this.title.hasError('required') ? 'componente obligatorio' : '';
+  }
+
+/*___________________________________________________________________________________________ */
   constructor() { }
 
   ngOnInit(): void {

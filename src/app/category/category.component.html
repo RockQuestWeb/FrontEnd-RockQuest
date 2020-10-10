@@ -1,1 +1,25 @@
-<p>category works!</p>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Categoria</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>Titulo Categoria</mat-label>
+                <input matInput placeholder="category" [formControl]="title" required>
+                <mat-error *ngIf="title.invalid">{{getErrorMessageTitulo()}}</mat-error>
+            </mat-form-field>
+        </div>
+        <hr>
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>Descripcion</mat-label>
+                <textarea matInput placeholder="Descripcion"></textarea>
+              </mat-form-field>
+        </div>
+        <hr>
+        <div class="aceptar">
+            <button mat-raised-button>Aceptar</button>
+        </div>
+    </mat-card-content>
+</mat-card>

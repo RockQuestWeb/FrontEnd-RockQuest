@@ -6,7 +6,7 @@
         <div>
             <mat-form-field appearance="fill">
                 <mat-label>Titulo Grupo</mat-label>
-                <input matInput placeholder="nombre del grupo" [formControl]="title" required>
+                <input matInput [(ngModel)]="group.title" placeholder="nombre del grupo" [formControl]="title" required>
                 <mat-error *ngIf="title.invalid">{{getErrorMessageTitulo()}}</mat-error>
             </mat-form-field>
         </div>
@@ -14,7 +14,7 @@
         <div>
             <mat-form-field appearance="fill">
                 <mat-label>usuario</mat-label>
-                <input matInput placeholder="usuario" [formControl]="usuario" required>
+                <input matInput [(ngModel)]="group.users" placeholder="usuario" [formControl]="usuario" required>
                 <mat-error *ngIf="usuario.invalid">{{getErrorMessageUsuario()}}</mat-error>
             </mat-form-field>
         </div>
@@ -32,7 +32,7 @@
         </div>
         <hr>
         <div class="aceptar">
-            <button mat-raised-button>Aceptar</button>
+            <button mat-raised-button (click)="setGroup()">Aceptar</button>
         </div>
     </mat-card-content>
 </mat-card>

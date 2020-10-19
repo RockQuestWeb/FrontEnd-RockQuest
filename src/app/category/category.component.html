@@ -6,7 +6,7 @@
         <div>
             <mat-form-field appearance="fill">
                 <mat-label>Titulo Categoria</mat-label>
-                <input matInput placeholder="category" [formControl]="title" required>
+                <input matInput [(ngModel)]="category.title" placeholder="category" [formControl]="title" required>
                 <mat-error *ngIf="title.invalid">{{getErrorMessageTitulo()}}</mat-error>
             </mat-form-field>
         </div>
@@ -14,12 +14,12 @@
         <div>
             <mat-form-field appearance="fill">
                 <mat-label>Descripcion</mat-label>
-                <textarea matInput placeholder="Descripcion"></textarea>
+                <textarea matInput [(ngModel)]="category.description" placeholder="Descripcion"></textarea>
               </mat-form-field>
         </div>
         <hr>
         <div class="aceptar">
-            <button mat-raised-button>Aceptar</button>
+            <button mat-raised-button (click)="setCategory()">Aceptar</button>
         </div>
     </mat-card-content>
 </mat-card>

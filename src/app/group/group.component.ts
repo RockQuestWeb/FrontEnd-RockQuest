@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
+import { GroupModel } from 'src/model/group.model';
+import { GroupService } from '../services/group.service';
 
 @Component({
   selector: 'app-group',
@@ -7,6 +9,8 @@ import {FormControl, Validators} from '@angular/forms';
   styleUrls: ['./group.component.css']
 })
 export class GroupComponent implements OnInit {
+
+  group: GroupModel;
 
   title = new FormControl('', [Validators.required]);
 
@@ -27,7 +31,18 @@ export class GroupComponent implements OnInit {
   }
   /*_____________________________________________________________________________________________________________ */
 
-  constructor() { }
+  constructor(private groupService: GroupService) { 
+    this.group = new GroupModel();
+  }
+
+  setGroup(){
+    console.log("Grupo")
+    this.groupService.setGroup(this.group).subscribe(
+      (res)=>{
+        console.log(res);
+      }
+    );
+  }
 
   ngOnInit(): void {
   }

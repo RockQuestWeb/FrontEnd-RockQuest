@@ -6,7 +6,7 @@
         <div>
             <mat-form-field appearance="fill">
                 <mat-label>Titulo Logro</mat-label>
-                <input matInput placeholder="nombre del logro" [formControl]="title" required>
+                <input matInput [(ngModel)]="achivement.title" placeholder="nombre del logro" [formControl]="title" required>
                 <mat-error *ngIf="title.invalid">{{getErrorMessageTitulo()}}</mat-error>
             </mat-form-field>
         </div>
@@ -14,7 +14,7 @@
         <div>
             <mat-form-field appearance="fill">
                 <mat-label>Nombre Creador</mat-label>
-                <input matInput placeholder="nombre del creador" [formControl]="nombre" required>
+                <input matInput  [(ngModel)]="achivement.creator" placeholder="nombre del creador" [formControl]="nombre" required>
                 <mat-error *ngIf="nombre.invalid">{{getErrorMessageNombre()}}</mat-error>
             </mat-form-field>
         </div>
@@ -22,7 +22,7 @@
         <div>
             <mat-form-field appearance="fill">
                 <mat-label>Descripcion</mat-label>
-                <textarea matInput placeholder="Descripcion"></textarea>
+                <textarea matInput  [(ngModel)]="achivement.description" placeholder="Descripcion"></textarea>
               </mat-form-field>
         </div>
         <hr>
@@ -39,7 +39,7 @@
         </div>
         <hr>
         <div class="aceptar">
-            <button mat-raised-button>Aceptar</button>
+            <button mat-raised-button (click)="setAchivement()" >Aceptar</button>
         </div>
     </mat-card-content>
 </mat-card>

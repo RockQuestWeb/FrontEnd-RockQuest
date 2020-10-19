@@ -6,7 +6,7 @@
         <div>
             <mat-form-field appearance="fill">
                 <mat-label>nombre reconpensa</mat-label>
-                <input matInput placeholder="nombre recompensa" [formControl]="nombre" required>
+                <input matInput [(ngModel)]="prize.rewards" placeholder="nombre recompensa" [formControl]="nombre" required>
                 <mat-error *ngIf="nombre.invalid">{{getErrorMessageNombre()}}</mat-error>
             </mat-form-field>
         </div>
@@ -14,13 +14,13 @@
         <div>
             <mat-form-field appearance="fill">
                 <mat-label>cantidad de tickets</mat-label>
-                <input matInput typy='number' placeholder="catidad de tickets" [formControl]="tickets" required>
+                <input matInput [(ngModel)]="prize.tickets" typy='number' placeholder="catidad de tickets" [formControl]="tickets" required>
                 <mat-error *ngIf="tickets.invalid">{{getErrorMessageTickets()}}</mat-error>
             </mat-form-field>
         </div>
         <hr>
         <div class="aceptar">
-            <button mat-raised-button>Aceptar</button>
+            <button mat-raised-button (click)="setPrize()">Aceptar</button>
         </div>
     </mat-card-content>
 </mat-card>

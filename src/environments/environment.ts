@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  url: 'https://rockquest.herokuapp.com/'
+  url: 'https://rockquest.herokuapp.com'
 };
 
 /*

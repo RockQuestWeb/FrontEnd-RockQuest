@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,7 @@ import { GroupComponent } from './group/group.component';
 import { CityComponent } from './city/city.component';
 import { CategoryComponent } from './category/category.component';
 import { AchievementComponent } from './achievement/achievement.component';
+import { FormsModule } from '@angular/forms';
 
 /*_________________________________________________________MATERIAL_________________________________________________________*/
 
@@ -51,6 +53,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSliderModule,
+    HttpClientModule,
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
@@ -58,9 +61,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatChipsModule,
     MatIconModule,
     MatButtonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
+import { User } from '../models/user.model';
+import {UserService} from "../services/user.service";
 
 @Component({
   selector: 'app-registry',
@@ -7,6 +9,9 @@ import {FormControl, Validators} from '@angular/forms';
   styleUrls: ['./registry.component.css']
 })
 export class RegistryComponent implements OnInit {
+
+  user: User;
+
   hide = true;
 
   email = new FormControl('', [Validators.required, Validators.email]);
@@ -38,7 +43,20 @@ export class RegistryComponent implements OnInit {
   }
 
 /*___________________________________________________________________________________________ */
-  constructor() { }
+  constructor(
+    private userService: UserService
+  ) {
+    this.user = new User();
+  }
+
+  setUser(){
+    console.log("aqui")
+    this.userService.setUser(this.user).subscribe(
+      (res)=>{
+        console.log(res);
+      }
+    )
+  }
 
   ngOnInit(): void {
   }

@@ -11,7 +11,7 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  getAchivement():Observable<User[]>{
+  getUser():Observable<User[]>{
     return this.http.get <User[]> (`${environment.url}/user`);
   }
 
@@ -19,7 +19,7 @@ export class UserService {
     return this.http.get <User> (`${environment.url}/user/${id}`);
   }
 
-  setAchivement( user: User){
+  setUser( user: User){
     return this.http.post (`${environment.url}/user`, user);
   }
 

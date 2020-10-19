@@ -1,0 +1,26 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>premio</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>nombre reconpensa</mat-label>
+                <input matInput placeholder="nombre recompensa" [formControl]="nombre" required>
+                <mat-error *ngIf="nombre.invalid">{{getErrorMessageNombre()}}</mat-error>
+            </mat-form-field>
+        </div>
+        <hr>
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>cantidad de tickets</mat-label>
+                <input matInput typy='number' placeholder="catidad de tickets" [formControl]="tickets" required>
+                <mat-error *ngIf="tickets.invalid">{{getErrorMessageTickets()}}</mat-error>
+            </mat-form-field>
+        </div>
+        <hr>
+        <div class="aceptar">
+            <button mat-raised-button>Aceptar</button>
+        </div>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,45 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Registro</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>nombre</mat-label>
+                <input matInput placeholder="Gustavo Patarroyo" [formControl]="name" required>
+                <mat-error *ngIf="password.invalid">{{getErrorMessageName()}}</mat-error>
+            </mat-form-field>
+          </div>
+          <hr>
+          <div>
+            <mat-form-field appearance="fill">
+                <mat-label>contraseña</mat-label>
+                <input matInput placeholder="ejemplo: Dr212?121*" [type]="hide ? 'password' : 'text'" [formControl]="password" required>
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                <mat-error *ngIf="password.invalid">{{getErrorMessagePassword()}}</mat-error>
+              </mat-form-field>
+          </div>
+          <hr>
+          <div>
+            <mat-form-field appearance="fill">
+                <mat-label>email</mat-label>
+                <input matInput placeholder="ejemplo: pat@example.com" [formControl]="email" required>
+                <mat-error *ngIf="email.invalid">{{getErrorMessageEmail()}}</mat-error>
+              </mat-form-field>
+          </div>
+          <hr>
+          <div>
+            <mat-form-field appearance="fill">
+                <mat-label>codigo universitario</mat-label>
+                <input matInput placeholder="ejemplo: 1710010543" type="number" [formControl]="codeU" required>
+                <mat-error *ngIf="codeU.invalid">{{getErrorMessageCodeu()}}</mat-error>
+            </mat-form-field>
+          </div>
+          <hr>
+          <div class="aceptar">
+            <button mat-raised-button>Aceptar</button>
+          </div>
+    </mat-card-content>
+</mat-card>

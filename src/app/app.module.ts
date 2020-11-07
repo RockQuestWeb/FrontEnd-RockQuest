@@ -32,6 +32,7 @@ import { DatosProfesorComponent } from './estudiante/datos-profesor/datos-profes
 import { TablaPremiosComponent } from './estudiante/tabla-premios/tabla-premios.component';
 import { ProfesorComponent } from './profesor/profesor.component';
 import { ListaEstudianteComponent } from './profesor/lista-estudiante/lista-estudiante.component';
+import { CreadorComponent } from './creador/creador.component';
 
 const RUTAS:Route[]=[
   { path: '', pathMatch: 'full', redirectTo: '/principal' },
@@ -59,7 +60,8 @@ const RUTAS:Route[]=[
     DatosProfesorComponent,
     TablaPremiosComponent,
     ProfesorComponent,
-    ListaEstudianteComponent
+    ListaEstudianteComponent,
+    CreadorComponent
   ],
   imports: [
     BrowserModule,

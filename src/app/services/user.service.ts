@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { User } from '../models/user.model';
+import { UserModel } from '../../model/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -11,15 +11,15 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  getUser():Observable<User[]>{
-    return this.http.get <User[]> (`${environment.url}/user`);
+  getUser():Observable<UserModel[]>{
+    return this.http.get <UserModel[]> (`${environment.url}/user`);
   }
 
-  getOne(id: string):Observable<User>{
-    return this.http.get <User> (`${environment.url}/user/${id}`);
+  getOne(id: string):Observable<UserModel>{
+    return this.http.get <UserModel> (`${environment.url}/user/${id}`);
   }
 
-  setUser( user: User){
+  setUser( user: UserModel){
     return this.http.post (`${environment.url}/user`, user);
   }
 

@@ -41,8 +41,7 @@ export class RegistrarComponent implements OnInit {
 /*___________________________________________________________________________________________ */
   constructor(
     private userService: UserService
-  ) {
-  }
+  ) {}
 
   ngOnInit(): void {
   }

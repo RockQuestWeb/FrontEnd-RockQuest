@@ -1,0 +1,34 @@
+<main class="h-100">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Ingresar</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Usuario</mat-label>
+                    <input matInput placeholder="ejemplo: example@poligran.edu.co" [formControl]="usuario" required>
+                    <mat-error *ngIf="usuario.invalid">{{getErrorMessageUsuario()}}</mat-error>
+                </mat-form-field>
+            </div>
+            <hr>
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Contraseña</mat-label>
+                    <input matInput placeholder="ejemplo: Dr212?121*" [formControl]="contrasena" required>
+                    <mat-error *ngIf="contrasena.invalid">{{getErrorMessageContrasena()}}</mat-error>
+                </mat-form-field>
+            </div>
+            <hr>
+            <div class="aceptar">
+                <button mat-raised-button>Aceptar</button>
+              </div>
+        </mat-card-content>
+    </mat-card>
+    <div class="d-flex flex-column justify-content-center align-content-center">
+        <p class="text-center text-capitalize">si no estas registrado da click</p>
+        <a href="" class="btn btn-danger btn-lg" routerLink="/registro">registrate</a>
+    </div>
+    
+</main>

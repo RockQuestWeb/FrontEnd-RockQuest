@@ -4,20 +4,14 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RegistryComponent } from './registry/registry.component';
-import { QuestComponent } from './quest/quest.component';
-import { ProgressComponent } from './progress/progress.component';
-import { ProgramComponent } from './program/program.component';
-import { PrizeComponent } from './prize/prize.component';
-import { ObjectComponent } from './object/object.component';
-import { NpcComponent } from './npc/npc.component';
-import { MissionComponent } from './mission/mission.component';
-import { GroupComponent } from './group/group.component';
-import { CityComponent } from './city/city.component';
-import { CategoryComponent } from './category/category.component';
-import { AchievementComponent } from './achievement/achievement.component';
-
-/*_________________________________________________________MATERIAL_________________________________________________________*/
+import { HeaderComponent } from './header/header.component';
+import { PrincipalComponent } from './principal/principal.component';
+import { SliderComponent } from './principal/slider/slider.component';
+import { CardsPrincipalesComponent } from './principal/cards-principales/cards-principales.component';
+import { ImformacionComponent } from './principal/imformacion/imformacion.component';
+import { FooterComponent } from './principal/footer/footer.component';
+import { EstudianteComponent } from './estudiante/estudiante.component';
+import { RegistrarComponent } from './registrar/registrar.component';
 
 import { MatSliderModule } from '@angular/material/slider';
 import {MatCardModule} from '@angular/material/card';
@@ -28,23 +22,44 @@ import {MatChipsModule} from '@angular/material/chips';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
+import {RouterModule,Route} from '@angular/router';
+import { LoginComponent } from './login/login.component';
+import { ProgresoComponent } from './estudiante/progreso/progreso.component';
+import { DatosEstudianteComponent } from './estudiante/datos-estudiante/datos-estudiante.component';
+import { DatosProfesorComponent } from './estudiante/datos-profesor/datos-profesor.component';
+import { TablaPremiosComponent } from './estudiante/tabla-premios/tabla-premios.component';
+import { ProfesorComponent } from './profesor/profesor.component';
+import { ListaEstudianteComponent } from './profesor/lista-estudiante/lista-estudiante.component';
+
+const RUTAS:Route[]=[
+  { path: '', pathMatch: 'full', redirectTo: '/principal' },
+  { path: 'principal', component: PrincipalComponent },
+  { path: 'registro', component: RegistrarComponent},
+  { path: 'ingresar', component: LoginComponent},
+  { path: 'estudiante', component: EstudianteComponent},
+  { path: 'profesor', component: ProfesorComponent}
+]
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegistryComponent,
-    QuestComponent,
-    ProgressComponent,
-    ProgramComponent,
-    PrizeComponent,
-    ObjectComponent,
-    NpcComponent,
-    MissionComponent,
-    GroupComponent,
-    CityComponent,
-    CategoryComponent,
-    AchievementComponent
+    HeaderComponent,
+    PrincipalComponent,
+    SliderComponent,
+    CardsPrincipalesComponent,
+    ImformacionComponent,
+    FooterComponent,
+    EstudianteComponent,
+    RegistrarComponent,
+    LoginComponent,
+    ProgresoComponent,
+    DatosEstudianteComponent,
+    DatosProfesorComponent,
+    TablaPremiosComponent,
+    ProfesorComponent,
+    ListaEstudianteComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +73,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatChipsModule,
     MatIconModule,
     MatButtonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatProgressBarModule,
+    RouterModule.forRoot(RUTAS)
   ],
   providers: [],
   bootstrap: [AppComponent]

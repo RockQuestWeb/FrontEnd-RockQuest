@@ -1,0 +1,25 @@
+main .row .col-12 div .carousel-inner, 
+main .row .col-12 div .carousel-inner .carousel-item , main .row .col-12 div .carousel-inner .carousel-item img{
+    width: 100%;
+    height: 800px;
+}
+
+main .row .col-12 div .carousel-inner .carousel-item div{
+    text-shadow: 1px 1px 5px black;
+}
+
+@media screen and (max-width:992px){
+    main .row .col-12 div .carousel-inner, 
+    main .row .col-12 div .carousel-inner .carousel-item , main .row .col-12 div .carousel-inner .carousel-item img{
+    width: 100%;
+    height: 500px;
+    }
+}
+
+@media screen and (max-width:768px){
+    main .row .col-12 div .carousel-inner, 
+    main .row .col-12 div .carousel-inner .carousel-item , main .row .col-12 div .carousel-inner .carousel-item img{
+    width: 100%;
+    height: 300px;
+    }
+}

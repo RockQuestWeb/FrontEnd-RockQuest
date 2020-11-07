@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-boxs;
+}
+
+main .row div div, main .row div div a{
+    width: 100%;
+    border-radius: 0px;
+    vertical-align: top;
+}
+
+main .row div, main .row div div img{
+    width: 100%;
+    height: 372px;
+}
+
+main .row div div img{
+    vertical-align: top;
+}
+
+@media screen and (max-width:768px){
+    main .row div, main .row div div img{
+        width: 100%;
+        height: 200px;
+    }
+}

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "FrontEnd-RockQuest": {
+    "front": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/FrontEnd-RockQuest",
+            "outputPath": "dist/front",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -25,9 +25,14 @@
             ],
             "styles": [
               "src/custom-theme.scss",
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery-3.5.1.slim.min.js",
+              "src/assets/js/popper.min.js",
+              "src/assets/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -63,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "FrontEnd-RockQuest:build"
+            "browserTarget": "front:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "FrontEnd-RockQuest:build:production"
+              "browserTarget": "front:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "FrontEnd-RockQuest:build"
+            "browserTarget": "front:build"
           }
         },
         "test": {
@@ -111,19 +116,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "FrontEnd-RockQuest:serve"
+            "devServerTarget": "front:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "FrontEnd-RockQuest:serve:production"
+              "devServerTarget": "front:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "FrontEnd-RockQuest",
+  "defaultProject": "front",
   "cli": {
-    "analytics": "1f22624f-8ea5-4b55-b26f-2ac4aa0e37d8"
+    "analytics": "0ecf705b-d114-4dea-8254-44ee4f06a736"
   }
 }

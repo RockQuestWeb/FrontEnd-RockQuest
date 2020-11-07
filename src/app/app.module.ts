@@ -34,6 +34,15 @@ import { TablaPremiosComponent } from './estudiante/tabla-premios/tabla-premios.
 import { ProfesorComponent } from './profesor/profesor.component';
 import { ListaEstudianteComponent } from './profesor/lista-estudiante/lista-estudiante.component';
 import { CreadorComponent } from './creador/creador.component';
+import { MenuCreadorComponent } from './creador/menu-creador/menu-creador.component';
+import { CreadorMisionComponent } from './creador/menu-creador/creador-mision/creador-mision.component';
+import { CreadorMundoComponent } from './creador/menu-creador/creador-mundo/creador-mundo.component';
+import { CreadorObjetosComponent } from './creador/menu-creador/creador-mundo/creador-objetos/creador-objetos.component';
+import { CreadorPersonajeComponent } from './creador/menu-creador/creador-mundo/creador-personaje/creador-personaje.component';
+import { ImformacionMisionComponent } from './creador/menu-creador/creador-mision/imformacion-mision/imformacion-mision.component';
+import { CrearMisionComponent } from './creador/menu-creador/creador-mision/crear-mision/crear-mision.component';
+import { TablaMisionesComponent } from './creador/menu-creador/creador-mision/tabla-misiones/tabla-misiones.component';
+import { CondicionesObjetoComponent } from './creador/menu-creador/creador-objetos/condiciones-objeto/condiciones-objeto.component';
 
 const RUTAS:Route[]=[
   { path: '', pathMatch: 'full', redirectTo: '/principal' },
@@ -62,7 +71,16 @@ const RUTAS:Route[]=[
     TablaPremiosComponent,
     ProfesorComponent,
     ListaEstudianteComponent,
-    CreadorComponent
+    CreadorComponent,
+    MenuCreadorComponent,
+    CreadorMisionComponent,
+    CreadorMundoComponent,
+    CreadorObjetosComponent,
+    CreadorPersonajeComponent,
+    ImformacionMisionComponent,
+    CrearMisionComponent,
+    TablaMisionesComponent,
+    CondicionesObjetoComponent
   ],
   imports: [
     BrowserModule,

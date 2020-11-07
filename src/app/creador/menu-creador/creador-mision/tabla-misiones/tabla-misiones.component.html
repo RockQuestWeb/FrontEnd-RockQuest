@@ -1,0 +1,24 @@
+<main>
+    <div class="row no-gutters">
+        <div class="col-12">
+            <table class="table table-hover table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th class="h6">Orden</th>
+                        <th class="h6">Condicion</th>
+                        <th class="h6">Dialogo</th>
+                        <th class="h6">Borrar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let misiones of listaMisiones" class="table-light">
+                        <td>{{misiones.orden}}</td>
+                        <td>{{misiones.condicion}}</td>
+                        <td>{{misiones.dialogo}}</td>
+                        <td><button class="btn btn-danger btn-lg">X</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>

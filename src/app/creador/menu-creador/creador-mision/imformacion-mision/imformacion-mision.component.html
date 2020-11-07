@@ -1,0 +1,17 @@
+<main class="pb-3 pt-5">
+    <div class="row no-gutters d-flex justify-content-between">
+        <div class="col-4 d-flex">
+            <p class="h2">Mision: </p>
+            <p class="h2 pl-4">{{idMision}}</p>
+        </div>
+        <div class="col-6 d-flex">
+            <p class="h2 w-25 pr-4">Materia: </p>
+            <mat-form-field appearance="fill" class="w-100">
+                <mat-label class="w-100">seleccione</mat-label>
+                <mat-select >
+                  <mat-option value="option" *ngFor="let materia of listaMateria">{{materia}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+</main>

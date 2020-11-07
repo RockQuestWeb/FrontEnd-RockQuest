@@ -1,0 +1,28 @@
+<main>
+    <div class="row no-gutters  d-flex justify-content-between">
+        <div class="col-12 d-flex justify-content-between">
+            <p class="h2 w-25 pr-4">Antiguo: </p>
+            <input type="checkbox">
+            <mat-form-field appearance="fill" class="w-100">
+                <mat-label class="w-100">seleccione</mat-label>
+                <mat-select >
+                <mat-option value="option" *ngFor="let objetos of listaObjetos">{{objetos}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="row no-gutters">
+        <div class="col-12 d-flex justify-content-between">
+            <p class="h3 px-4">Nombre Objeto:</p>
+            <mat-form-field appearance="fill" class="w-100">
+                <mat-label>nombre</mat-label>
+                <input matInput>
+          </mat-form-field>
+        </div>
+    </div>
+    <div class="row no-gutters">
+        <div class="col 12">
+            
+        </div>
+    </div>
+</main>

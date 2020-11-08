@@ -46,6 +46,8 @@ import { ImformacionObjetosComponent } from './creador/menu-creador/creador-obje
 import { CargarImagenComponent } from './creador/menu-creador/creador-objetos/cargar-imagen/cargar-imagen.component';
 import { CargarImagenPersonajeComponent } from './creador/menu-creador/creador-personaje/cargar-imagen-personaje/cargar-imagen-personaje.component';
 import { ImformacionPersonajeComponent } from './creador/menu-creador/creador-personaje/imformacion-personaje/imformacion-personaje.component';
+import { ManejoPuntosComponent } from './profesor/manejo-puntos/manejo-puntos.component';
+import { CrearAlumnoComponent } from './profesor/crear-alumno/crear-alumno.component';
 
 const RUTAS:Route[]=[
   { path: '', pathMatch: 'full', redirectTo: '/principal' },
@@ -86,7 +88,9 @@ const RUTAS:Route[]=[
     ImformacionObjetosComponent,
     CargarImagenComponent,
     CargarImagenPersonajeComponent,
-    ImformacionPersonajeComponent
+    ImformacionPersonajeComponent,
+    ManejoPuntosComponent,
+    CrearAlumnoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,4 @@
+main .row .tabla{
+    height: 700px;
+    overflow: auto;
+}

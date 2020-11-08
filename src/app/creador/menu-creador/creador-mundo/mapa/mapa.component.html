@@ -1,0 +1,30 @@
+<div>
+    <input type="number" placeholder="Filas" [(ngModel)]="filas">
+    <input type="number" placeholder="columnas" [(ngModel)]="columnas">
+    <button (click)="llenarMapa()">Actualizar</button>
+</div>
+
+<table>
+    <p>{{filas}}</p>
+    <tr>
+        <div *ngFor="let fila of mapa; let i=index" >
+            <td *ngFor="let columna of fila; let j=index">
+                <div class="dropdown">
+                    <div class="box">
+                        <img src={{columna}} width="100" height="100">
+                    </div>
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Imagenes
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
+                        <div *ngFor="let image of images">
+                            <a class="dropdown-item" (click)="ponerImagen(i,j,image)"><img src={{image}} width="50" height="50"></a>
+                        </div>
+                    </div>
+                </div> 
+            
+            </td>
+        </div>
+    </tr>
+    
+</table>

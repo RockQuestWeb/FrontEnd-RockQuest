@@ -13,6 +13,8 @@ import { ImformacionComponent } from './principal/imformacion/imformacion.compon
 import { FooterComponent } from './principal/footer/footer.component';
 import { EstudianteComponent } from './estudiante/estudiante.component';
 import { RegistrarComponent } from './registrar/registrar.component';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 import { MatSliderModule } from '@angular/material/slider';
 import {MatCardModule} from '@angular/material/card';
@@ -48,6 +50,9 @@ import { CargarImagenPersonajeComponent } from './creador/menu-creador/creador-p
 import { ImformacionPersonajeComponent } from './creador/menu-creador/creador-personaje/imformacion-personaje/imformacion-personaje.component';
 import { ManejoPuntosComponent } from './profesor/manejo-puntos/manejo-puntos.component';
 import { CrearAlumnoComponent } from './profesor/crear-alumno/crear-alumno.component';
+import { MapaComponent } from './creador/menu-creador/creador-mundo/mapa/mapa.component';
+import { InformacionComponent } from './creador/menu-creador/creador-mundo/informacion/informacion.component';
+import { ContenedorImagenesComponent } from './creador/menu-creador/creador-mundo/informacion/contenedor-imagenes/contenedor-imagenes.component';
 
 const RUTAS:Route[]=[
   { path: '', pathMatch: 'full', redirectTo: '/principal' },
@@ -90,7 +95,10 @@ const RUTAS:Route[]=[
     CargarImagenPersonajeComponent,
     ImformacionPersonajeComponent,
     ManejoPuntosComponent,
-    CrearAlumnoComponent
+    CrearAlumnoComponent,
+    MapaComponent,
+    InformacionComponent,
+    ContenedorImagenesComponent
   ],
   imports: [
     BrowserModule,
@@ -107,6 +115,8 @@ const RUTAS:Route[]=[
     MatButtonModule,
     ReactiveFormsModule,
     MatProgressBarModule,
+    FormsModule,
+    CommonModule,
     RouterModule.forRoot(RUTAS)
   ],
   providers: [HttpClientModule],

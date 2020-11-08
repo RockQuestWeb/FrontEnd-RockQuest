@@ -8,14 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class MenuCreadorComponent implements OnInit {
 
   seleccion: Number;
-  constructor() { this.seleccion = 0
-  console.log(this.seleccion);}
+  constructor() { this.seleccion = 0}
 
   ngOnInit(): void {
   }
 
   selecWindows(number:Number){
     this.seleccion = number;
+    console.log(this.seleccion);
   }
 
 }

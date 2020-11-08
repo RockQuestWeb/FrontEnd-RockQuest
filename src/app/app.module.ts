@@ -42,6 +42,10 @@ import { CrearMisionComponent } from './creador/menu-creador/creador-mision/crea
 import { TablaMisionesComponent } from './creador/menu-creador/creador-mision/tabla-misiones/tabla-misiones.component';
 import { CreadorPersonajeComponent } from './creador/menu-creador/creador-personaje/creador-personaje.component';
 import { CreadorObjetosComponent } from './creador/menu-creador/creador-objetos/creador-objetos.component';
+import { ImformacionObjetosComponent } from './creador/menu-creador/creador-objetos/imformacion-objetos/imformacion-objetos.component';
+import { CargarImagenComponent } from './creador/menu-creador/creador-objetos/cargar-imagen/cargar-imagen.component';
+import { CargarImagenPersonajeComponent } from './creador/menu-creador/creador-personaje/cargar-imagen-personaje/cargar-imagen-personaje.component';
+import { ImformacionPersonajeComponent } from './creador/menu-creador/creador-personaje/imformacion-personaje/imformacion-personaje.component';
 
 const RUTAS:Route[]=[
   { path: '', pathMatch: 'full', redirectTo: '/principal' },
@@ -78,7 +82,11 @@ const RUTAS:Route[]=[
     CrearMisionComponent,
     TablaMisionesComponent,
     CreadorPersonajeComponent,
-    CreadorObjetosComponent
+    CreadorObjetosComponent,
+    ImformacionObjetosComponent,
+    CargarImagenComponent,
+    CargarImagenPersonajeComponent,
+    ImformacionPersonajeComponent
   ],
   imports: [
     BrowserModule,

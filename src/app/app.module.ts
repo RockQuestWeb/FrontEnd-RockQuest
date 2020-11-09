@@ -34,7 +34,6 @@ import { DatosEstudianteComponent } from './estudiante/datos-estudiante/datos-es
 import { DatosProfesorComponent } from './estudiante/datos-profesor/datos-profesor.component';
 import { TablaPremiosComponent } from './estudiante/tabla-premios/tabla-premios.component';
 import { ProfesorComponent } from './profesor/profesor.component';
-import { ListaEstudianteComponent } from './profesor/lista-estudiante/lista-estudiante.component';
 import { CreadorComponent } from './creador/creador.component';
 import { MenuCreadorComponent } from './creador/menu-creador/menu-creador.component';
 import { CreadorMisionComponent } from './creador/menu-creador/creador-mision/creador-mision.component';
@@ -48,11 +47,13 @@ import { ImformacionObjetosComponent } from './creador/menu-creador/creador-obje
 import { CargarImagenComponent } from './creador/menu-creador/creador-objetos/cargar-imagen/cargar-imagen.component';
 import { CargarImagenPersonajeComponent } from './creador/menu-creador/creador-personaje/cargar-imagen-personaje/cargar-imagen-personaje.component';
 import { ImformacionPersonajeComponent } from './creador/menu-creador/creador-personaje/imformacion-personaje/imformacion-personaje.component';
-import { ManejoPuntosComponent } from './profesor/manejo-puntos/manejo-puntos.component';
-import { CrearAlumnoComponent } from './profesor/crear-alumno/crear-alumno.component';
 import { MapaComponent } from './creador/menu-creador/creador-mundo/mapa/mapa.component';
 import { InformacionComponent } from './creador/menu-creador/creador-mundo/informacion/informacion.component';
 import { ContenedorImagenesComponent } from './creador/menu-creador/creador-mundo/informacion/contenedor-imagenes/contenedor-imagenes.component';
+import { TablaEstudianteComponent } from './profesor/tabla-estudiante/tabla-estudiante.component';
+import { FiltrarEstudianteComponent } from './profesor/filtrar-estudiante/filtrar-estudiante.component';
+import { AgregarEstudianteComponent } from './profesor/agregar-estudiante/agregar-estudiante.component';
+import { AgregarPremioComponent } from './profesor/agregar-premio/agregar-premio.component';
 
 const RUTAS:Route[]=[
   { path: '', pathMatch: 'full', redirectTo: '/principal' },
@@ -80,7 +81,6 @@ const RUTAS:Route[]=[
     DatosProfesorComponent,
     TablaPremiosComponent,
     ProfesorComponent,
-    ListaEstudianteComponent,
     CreadorComponent,
     MenuCreadorComponent,
     CreadorMisionComponent,
@@ -94,11 +94,13 @@ const RUTAS:Route[]=[
     CargarImagenComponent,
     CargarImagenPersonajeComponent,
     ImformacionPersonajeComponent,
-    ManejoPuntosComponent,
-    CrearAlumnoComponent,
     MapaComponent,
     InformacionComponent,
-    ContenedorImagenesComponent
+    ContenedorImagenesComponent,
+    TablaEstudianteComponent,
+    FiltrarEstudianteComponent,
+    AgregarEstudianteComponent,
+    AgregarPremioComponent
   ],
   imports: [
     BrowserModule,

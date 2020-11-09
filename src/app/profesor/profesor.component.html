@@ -1,15 +1,31 @@
-<main>
-    <div class="row p-4 d-flex justify-content-between">
-        <div class="col-5">
-            <app-lista-estudiante></app-lista-estudiante>
-        </div>
-        <div class="col-6">
-            <p class="h1">Manejo Puntos</p>
-            <div class="row">
-                <app-crear-alumno></app-crear-alumno>
+<main class="p-5"> 
+    <div class="row no-gutters d-flex justify-content-between">
+        <div class="col-12 col-lg-5 columna">
+            <p class="h1">Estudiante</p>
+            <hr>
+            <div class="row no-gutters">
+                <div class="col-12">
+                    <app-filtrar-estudiante></app-filtrar-estudiante>
+                </div>
             </div>
-            <div class="row">
-                
+            <div class="row no-gutters">
+                <div class="col tabla">
+                    <app-tabla-estudiante></app-tabla-estudiante>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-6 mt-5 mt-lg-0 columna">
+            <p class="h1">Manejo Puntos:</p>
+            <hr>
+            <div class="row no-gutters d-flex flex-column justify-content-between align-content-between">
+                <div class="col-12">
+                    <app-agregar-estudiante></app-agregar-estudiante>
+                </div>
+
+                <div class="col-12 mt-5">
+                    <app-agregar-premio></app-agregar-premio>
+                </div>
             </div>
         </div>
     </div>

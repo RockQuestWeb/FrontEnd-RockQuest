@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ManejoPuntosComponent } from './manejo-puntos.component';
+import { AgregarPremioComponent } from './agregar-premio.component';
 
-describe('ManejoPuntosComponent', () => {
-  let component: ManejoPuntosComponent;
-  let fixture: ComponentFixture<ManejoPuntosComponent>;
+describe('AgregarPremioComponent', () => {
+  let component: AgregarPremioComponent;
+  let fixture: ComponentFixture<AgregarPremioComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ManejoPuntosComponent ]
+      declarations: [ AgregarPremioComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ManejoPuntosComponent);
+    fixture = TestBed.createComponent(AgregarPremioComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

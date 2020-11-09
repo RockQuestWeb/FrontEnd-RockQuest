@@ -1,7 +1,3 @@
-main table thead{
-    width: 100%;
-}
-
-main table tbody{
+main, main .row,main .row div,main .row div table,main .row div table thead,main .row div table tbody{
     width: 100%;
 }

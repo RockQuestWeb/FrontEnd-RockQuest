@@ -1,20 +1,24 @@
 <main class="pt-4">
-    <table class="table table-hover table-bordered table-responsive-lg">
-        <thead class="thead-dark">
-            <tr>
-                <th class="h6">Estudiante</th>
-                <th class="h6">Materia</th>
-                <th class="h6">Puntos</th>
-                <th class="h6">Borrar</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let estudiante of listaEstudiantes" class="table-light">
-                <td>{{estudiante.nombre}}</td>
-                <td>{{estudiante.materia}}</td>
-                <td>{{estudiante.puntos}}</td>
-                <td><button class="btn btn-danger btn-lg">X</button></td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="row no-gutters">
+        <div class="col-12">
+            <table class="table table-hover table-bordered table-responsive-lg">
+                <thead class="thead-dark">
+                    <tr>
+                        <th class="h6">Estudiante</th>
+                        <th class="h6">Materia</th>
+                        <th class="h6">Puntos</th>
+                        <th class="h6">Borrar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let estudiante of listaEstudiantes" class="table-light">
+                        <td>{{estudiante.nombre}}</td>
+                        <td>{{estudiante.materia}}</td>
+                        <td>{{estudiante.puntos}}</td>
+                        <td><button class="btn btn-danger btn-lg">X</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </main>

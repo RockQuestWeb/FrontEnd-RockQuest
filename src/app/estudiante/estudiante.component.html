@@ -1,0 +1,28 @@
+<main class="px-5 py-5">
+    <div class="row d-flex justify-content-between fila1">
+        <div class="mb-4 mb-md-0 col-12 col-md-4 col-lg-5 column pt-3">
+            <app-progreso></app-progreso>
+        </div>
+            
+
+        <div class="col-12 col-md-7 col-lg-6 column pt-3">
+            <app-datos-estudiante></app-datos-estudiante>
+        </div>
+    </div>
+
+    <div class="row fila2 mt-5 pt-3">
+        <div class="col-12 d-block d-sm-flex justify-content-between align-items-center border-bottom">
+            <p class="h1 d-none d-sm-block">Clase:</p>
+            <p class="h1 d-none d-sm-block">{{nomClase}}</p>
+
+            <p class="h4 d-block d-sm-none">Clase:</p>
+            <p class="h4 d-block d-sm-none">{{nomClase}}</p>
+        </div>
+        <div class="col-12 col-lg-7 my-3">
+            <app-datos-profesor></app-datos-profesor>
+        </div>
+        <div class="col-12 col-lg-5  my-3">
+            <app-tabla-premios></app-tabla-premios>
+        </div>
+    </div>
+</main>

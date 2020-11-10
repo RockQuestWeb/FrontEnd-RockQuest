@@ -1,0 +1,17 @@
+<main>
+    <p class="h3 d-block d-lg-none">Premios</p>
+    <table class="table table-hover table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th class="h6">premios</th>
+                <th class="h6">puntos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let premios of listaPremios" class="table-light">
+                <td>{{premios.nombrePremio}}</td>
+                <td>{{premios.puntosPremio}}</td>
+            </tr>
+        </tbody>
+    </table>
+</main>

@@ -1,0 +1,26 @@
+<main class="w-100 d-flex justify-content-center pt-4">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination pagination-lg">
+            <li class="page-item"> <button class="page-link" (click)="selecWindows(0)">Mision</button> </li>
+            <li class="page-item"> <button class="page-link" (click)="selecWindows(3)">Objetos</button> </li>
+            <li class="page-item"> <button class="page-link" (click)="selecWindows(1)">Personajes</button> </li>
+            <li class="page-item"> <button class="page-link" (click)="selecWindows(2)">Mundos</button> </li>
+        </ul>
+    </nav>
+</main>
+
+<div>
+    <div *ngIf="seleccion==1">
+        <app-creador-personaje></app-creador-personaje>
+    </div>
+    <div *ngIf="seleccion==0">
+        <app-creador-mision></app-creador-mision>
+    </div>
+    <div *ngIf="seleccion==2">
+        <app-creador-mundo></app-creador-mundo>
+    </div>
+    <div *ngIf="seleccion==3">
+        <app-creador-objetos></app-creador-objetos>
+    </div>
+</div>
+

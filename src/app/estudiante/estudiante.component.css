@@ -1,0 +1,25 @@
+main{
+    background: url(https://as01.epimg.net/meristation/imagenes/2013/10/08/album/1381235520_235520_000001_album_normal.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+main .fila2{
+    background: url(../../../imagenes/gaming-pattern.png);
+    border: 1px solid #000000;
+    border-radius: 20px;
+}
+
+main .fila1 .column{
+    border: 1px solid #000000;
+    border-radius: 20px;
+    background: url(../../../imagenes/gaming-pattern.png);
+}
+
+main .fila2{
+    border: 1px solid #000000;
+    border-radius: 20px;
+}
+
+

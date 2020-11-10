@@ -1,0 +1,18 @@
+main{
+    background: url(https://www.wallpapertip.com/wmimgs/24-247009_super-mario.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+main .row .columna{
+    background: url(../../../imagenes/gaming-pattern.png);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+main .row div .row .tabla{
+    height: 700px;
+    overflow: auto;
+    width: 100%;
+}

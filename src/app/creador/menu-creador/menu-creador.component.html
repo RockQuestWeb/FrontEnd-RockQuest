@@ -1,6 +1,17 @@
-<main class="w-100 d-flex justify-content-center pt-4">
+<main class="w-100 d-sm-flex justify-content-center pt-4  d-none">
     <nav aria-label="Page navigation example">
         <ul class="pagination pagination-lg">
+            <li class="page-item"> <button class="page-link" (click)="selecWindows(0)">Mision</button> </li>
+            <li class="page-item"> <button class="page-link" (click)="selecWindows(3)">Objetos</button> </li>
+            <li class="page-item"> <button class="page-link" (click)="selecWindows(1)">Personajes</button> </li>
+            <li class="page-item"> <button class="page-link" (click)="selecWindows(2)">Mundos</button> </li>
+        </ul>
+    </nav>
+</main>
+
+<main class="w-100 d-flex justify-content-center pt-4 d-sm-none">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination pagination-md">
             <li class="page-item"> <button class="page-link" (click)="selecWindows(0)">Mision</button> </li>
             <li class="page-item"> <button class="page-link" (click)="selecWindows(3)">Objetos</button> </li>
             <li class="page-item"> <button class="page-link" (click)="selecWindows(1)">Personajes</button> </li>

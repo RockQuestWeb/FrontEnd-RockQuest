@@ -1,19 +1,27 @@
 <main>
     <div class="row no-gutters d-flex justify-content-between">
         <div class="col-7">
-            <p class="h2">Imagen Personaje</p>
+            <p class="h2">Imagen Objeto</p>
         </div>
 
         <div class="col-5 d-flex">
-            <p class="h2 pr-3">Id:</p>
+            <p class="h2  pr-3">Id:</p>
             <p class="h2">{{idImagen}}</p>
         </div>
     </div>
     <div class="row no-gutters p-4 fila2">
-        <div class="col-8">
+        <div class="col-12 col-md-8">
             <img src="https://as.com/meristation/imagenes/2020/02/24/noticias/1582540103_904787_1582540270_noticia_normal.jpg" alt="">
         </div>
-        <div class="col-4 d-flex flex-column justify-content-around align-items-center">
+        <div class="col-4 d-md-flex flex-column justify-content-around align-items-center d-none">
+            <div>
+                <button class="btn btn-success btn-lg">Subir Nueva</button>
+            </div>
+            <div>
+                <button class="btn btn-danger btn-lg">Subir Antigua</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-4 d-flex justify-content-around align-items-center d-md-none mt-4">
             <div>
                 <button class="btn btn-success btn-lg">Subir Nueva</button>
             </div>

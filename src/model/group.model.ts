@@ -1,6 +1,6 @@
-import { User } from 'src/app/models/user.model';
+import { UserModel } from '../model/user.model';
 
 export class GroupModel {
     title: string;
-    users: User[];
+    users: UserModel[];
 }

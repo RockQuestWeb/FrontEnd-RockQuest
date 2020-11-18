@@ -2,9 +2,12 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+import { UserModel } from 'src/model/user.model';
+
 export const environment = {
   production: false,
-  url: 'https://rockquest.herokuapp.com'
+  url: 'https://rockquest.herokuapp.com',  
+  user: UserModel
 };
 
 /*

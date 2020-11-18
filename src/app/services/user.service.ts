@@ -23,4 +23,8 @@ export class UserService {
     return this.http.post (`${environment.url}/user`, user);
   }
 
+  getOneByMail (mail: String) :Observable<UserModel> {
+    return this.http.get <UserModel> (`${environment.url}/user/mail/${mail}`);
+  }
+
 }

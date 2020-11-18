@@ -4,4 +4,6 @@ export class UserModel {
     password: string;
     universityCode: string;
     tickets: number;
+    progress: String;
+    programs: String;
 }

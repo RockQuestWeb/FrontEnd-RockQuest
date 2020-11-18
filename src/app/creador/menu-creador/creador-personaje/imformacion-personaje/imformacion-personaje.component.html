@@ -1,23 +1,26 @@
 <main>
-    <div class="row no-gutters justify-content-between">
+    <div class="row no-gutters">
         <div class="col-12  d-flex py-5 align-content-center align-items-center">
-           <p class="h3 w-25 pr-4">personaje ya existente</p>
-           <div class="form-group form-check">
+           <p class="h3 w-25 pr-4 d-none d-md-block">personaje ya existente</p>
+           <p class="h3 w-100 pr-4 d-md-none d-block">personaje ya existente</p>
+           <div class="form-group form-check pl-5">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">marca solo si ya existe</label>
           </div>
         </div>
-        <div class="col-12 d-flex pb-5 justify-content-between align-content-center align-items-center">
-            <p class="h3 w-25 pr-4">selecionar personaje:</p>
+        <div class="col-12 d-block d-md-flex pb-5 justify-content-between align-content-center align-items-center">
+            <p class="h3 w-25 pr-4 d-none d-md-block">selecionar personaje:</p>
+            <p class="h3 w-100 pr-4 d-md-none d-block">selecionar personaje:</p>
             <mat-form-field appearance="fill" class="w-100">
                 <mat-label class="w-100">seleccione</mat-label>
                 <mat-select>
                   <mat-option value="option" *ngFor="let imgPersonajes of listaImgPersonajes">{{imgPersonajes}}</mat-option>
                 </mat-select>
-              </mat-form-field>
+            </mat-form-field>
         </div>
-        <div class="col-12  d-flex pb-5 justify-content-between align-content-center align-items-center">
-          <p class="h3 w-25 pr-4">nombre personaje:</p>
+        <div class="col-12  d-block d-md-flex pb-5 justify-content-between align-content-center align-items-center">
+          <p class="h3 w-25 pr-4 d-none d-md-block">nombre personaje:</p>
+          <p class="h3 w-100 pr-4 d-md-none d-block">nombre personaje:</p>
           <mat-form-field appearance="fill" class="w-100">
             <mat-label class="w-100">nombre</mat-label>
             <input matInput>

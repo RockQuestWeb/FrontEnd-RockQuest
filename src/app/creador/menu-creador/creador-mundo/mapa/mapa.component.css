@@ -1,0 +1,48 @@
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .fila_2{
+    width: 1000px;
+    height: 1000px;
+    overflow: scroll;
+}
+
+main .fila_2 div table tr div td div div img{
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+@media screen and (max-width:1197px){ 
+    main .fila_2{
+        width: 900px;
+        height: 900px;
+        overflow: scroll;
+    }
+}
+ 
+@media screen and (max-width:992px){ 
+    main .fila_2{
+        width: 700px;
+        height: 700px;
+        overflow: scroll;
+    }
+}
+@media screen and (max-width:768px){ 
+    main .fila_2{
+        width: 500px;
+        height: 500px;
+        overflow: scroll;
+    } 
+}
+@media screen and (max-width:513px){ 
+    main .fila_2{
+        width: 300px;
+        height: 300px;
+        overflow: scroll;
+    } 
+}

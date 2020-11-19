@@ -1,10 +1,10 @@
 <main>
     <div class="row no-gutters">
         <div class="col-12  d-flex py-5 align-content-center align-items-center">
-          <p class="h3 w-25 pr-4 d-none d-md-block">objeto existente</p>
-          <p class="h3 w-100 pr-4 d-md-none d-block">objeto existente</p>
+          <p class="h3 w-25 pr-4 d-none d-md-block" >objeto existente</p>
+          <p class="h3 w-100 pr-4 d-md-none d-block" >objeto existente</p>
           <div class="form-group form-check pl-5">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1" [(ngModel)]="existente">
             <label class="form-check-label" for="exampleCheck1">marca solo si ya existe</label>
           </div>
         </div>
@@ -14,17 +14,19 @@
             <mat-form-field appearance="fill" class="w-100">
               <mat-label class="w-100">seleccione</mat-label>
               <mat-select>
-                <mat-option value="option" *ngFor="let imgObjetos of listaImgObjetos">{{imgObjetos}}</mat-option>
+                <mat-option value="option" *ngFor="let imgObjetos of listaImgObjetos[0]">{{imgObjetos.name}}</mat-option>
               </mat-select>
             </mat-form-field>
         </div>
         <div class="col-12  d-block d-md-flex pb-5 justify-content-between align-content-center align-items-center">
-          <p class="h3 w-25 pr-4 d-none d-md-block">nombre objeto:</p>
+          <p class="h3 w-25 pr-4 d-none d-md-block" >nombre objeto:</p>
           <p class="h3 w-100 pr-4 d-md-none d-block">nombre objeto:</p>
           <mat-form-field appearance="fill" class="w-100">
             <mat-label class="w-100">nombre</mat-label>
-            <input matInput>
+            <input matInput [(ngModel)]="nombre">
           </mat-form-field>
+          <button class="btn btn-danger btn-lg" (click)="save()">Guardar</button>
         </div>
     </div>
+    
 </main>

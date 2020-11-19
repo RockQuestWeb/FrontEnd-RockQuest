@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./creador-objetos.component.css']
 })
 export class CreadorObjetosComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit(): void {

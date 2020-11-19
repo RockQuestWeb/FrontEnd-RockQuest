@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CargarImagenComponent implements OnInit {
 
+  image: File;
   idImagen:number=1;
 
   constructor() { }

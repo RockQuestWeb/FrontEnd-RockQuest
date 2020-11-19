@@ -4,7 +4,7 @@
            <p class="h3 w-25 pr-4 d-none d-md-block">personaje ya existente</p>
            <p class="h3 w-100 pr-4 d-md-none d-block">personaje ya existente</p>
            <div class="form-group form-check pl-5">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1" [(ngModel)]="existente">
             <label class="form-check-label" for="exampleCheck1">marca solo si ya existe</label>
           </div>
         </div>
@@ -14,7 +14,7 @@
             <mat-form-field appearance="fill" class="w-100">
                 <mat-label class="w-100">seleccione</mat-label>
                 <mat-select>
-                  <mat-option value="option" *ngFor="let imgPersonajes of listaImgPersonajes">{{imgPersonajes}}</mat-option>
+                  <mat-option value="option" *ngFor="let imgPersonajes of listaImgPersonajes[0]">{{imgPersonajes.name}}</mat-option>
                 </mat-select>
             </mat-form-field>
         </div>
@@ -23,8 +23,9 @@
           <p class="h3 w-100 pr-4 d-md-none d-block">nombre personaje:</p>
           <mat-form-field appearance="fill" class="w-100">
             <mat-label class="w-100">nombre</mat-label>
-            <input matInput>
+            <input matInput [(ngModel)]="nombre">
           </mat-form-field>
+          <button class="btn btn-danger btn-lg" (click)="save()">Guardar</button>
         </div>
     </div>
 </main>

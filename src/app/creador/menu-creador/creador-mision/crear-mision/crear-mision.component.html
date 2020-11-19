@@ -3,15 +3,15 @@
         <div class="col-12 col-lg-5 d-block d-md-flex justify-content-between align-content-center align-items-center">
             <p class="h3 px-4">Orden:</p>
             <mat-form-field appearance="fill" class="w-100 w-75-lg">
-                <mat-label># mision</mat-label>
-                <input matInput>
+                <mat-label># texto</mat-label>
+                <input matInput [(ngModel)]="numeracion">
             </mat-form-field>
         </div>
         <div class="col-12 col-lg-6 d-block d-md-flex justify-content-between align-content-center align-items-center">
             <p class="h3 px-4">Condicion:</p>
             <mat-form-field appearance="fill" class="w-100">
                 <mat-label>condicion</mat-label>
-                <input matInput>
+                <input matInput [(ngModel)]="condicion">
             </mat-form-field>
         </div>
     </div>
@@ -19,12 +19,12 @@
         <div class="col-12 col-lg-10 d-block d-md-flex justify-content-between">
             <p class="h3 px-4">Dialogo:</p>
             <mat-form-field appearance="fill" class="w-100">
-                <mat-label>condicion</mat-label>
-                <input matInput>
+                <mat-label>- - - - - -</mat-label>
+                <input matInput [(ngModel)]="dialogo">
             </mat-form-field>
         </div>
         <div class="col-12 col-lg-2 d-flex align-items-center justify-content-center">
-            <button class="btn btn-success btn-lg d-block ml-3 w-75">Agregar</button>
+            <button class="btn btn-success btn-lg d-block ml-3 w-75" (click)="loadList()">Agregar</button>
         </div>
     </div>
 </main>

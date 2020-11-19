@@ -7,7 +7,7 @@ import { UserModel } from 'src/model/user.model';
 export const environment = {
   production: false,
   url: 'https://rockquest.herokuapp.com',  
-  user: UserModel
+  user: new UserModel()
 };
 
 /*

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
+import { environment } from 'src/environments/environment';
 import { UserModel } from 'src/model/user.model';
 import { UserService } from "../services/user.service";
 
@@ -9,6 +10,7 @@ import { UserService } from "../services/user.service";
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  user: UserModel;
 
   hide = true;
 
@@ -26,12 +28,13 @@ export class LoginComponent implements OnInit {
     let contraseña = this.contrasena.value;
 
     try{
-      if(correo!= "" || contraseña!= ""){
+      if(correo!= "" && contraseña!= ""){
         let data = this.userService.getOneByMail(correo).subscribe(
           (res)=>{
             if(res != null){
               if(res.password == contraseña){
-                console.log("login");
+                environment.user = res;
+                console.log(environment.user)
               }else {
                 console.log("contraseña incorrecta");
               }

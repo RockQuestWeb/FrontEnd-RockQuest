@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-datos-estudiante',
@@ -7,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DatosEstudianteComponent implements OnInit {
 
-  nombre:string='Freddy Patarroyo';
+  nombre:string=environment.user.name;
   tiempoJuego:string='2 horas';
-  tikets:number=5;
+  tikets:number=environment.user.tickets;
 
   constructor() { }
 

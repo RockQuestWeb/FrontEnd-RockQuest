@@ -55,6 +55,10 @@ import { FiltrarEstudianteComponent } from './profesor/filtrar-estudiante/filtra
 import { AgregarEstudianteComponent } from './profesor/agregar-estudiante/agregar-estudiante.component';
 import { AgregarPremioComponent } from './profesor/agregar-premio/agregar-premio.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { CloudinaryModule, CloudinaryConfiguration, provideCloudinary } from '@cloudinary/angular-5.x';
+import * as  Cloudinary from 'cloudinary-core';
+import { CloudinarySettings } from "../settings";
+import { FileUploadModule } from "ng2-file-upload";
 
 const RUTAS:Route[]=[
   { path: '', pathMatch: 'full', redirectTo: '/principal' },
@@ -121,7 +125,9 @@ const RUTAS:Route[]=[
     FormsModule,
     CommonModule,
     MatDialogModule,
-    RouterModule.forRoot(RUTAS)
+    FileUploadModule,
+    RouterModule.forRoot(RUTAS),
+    CloudinaryModule.forRoot(Cloudinary, CloudinarySettings),
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent]

@@ -39,6 +39,18 @@
                 </mat-form-field>
               </div>
               <hr>
+              <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>rango</mat-label>
+                    <mat-select [formControl]="rank" placeholder="ejemplo: 1710010543" required>
+                      <mat-option value="estudiante">Estudiante</mat-option>
+                      <mat-option value="profesor">Profesor</mat-option>
+                      <mat-option value="creador">Creador de contenido</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="rank.invalid">{{getErrorMessageCodeu()}}</mat-error>
+                </mat-form-field>
+              </div>
+              <hr>
               <div class="aceptar">
                 <button mat-raised-button (click)="saveUser()">Aceptar</button>
               </div>

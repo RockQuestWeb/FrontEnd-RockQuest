@@ -3,6 +3,7 @@ export class UserModel {
     mail: string;
     password: string;
     universityCode: string;
+    rank: string;
     tickets: number;
     progress: String;
     programs: String;

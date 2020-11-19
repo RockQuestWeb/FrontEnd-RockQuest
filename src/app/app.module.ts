@@ -54,6 +54,7 @@ import { TablaEstudianteComponent } from './profesor/tabla-estudiante/tabla-estu
 import { FiltrarEstudianteComponent } from './profesor/filtrar-estudiante/filtrar-estudiante.component';
 import { AgregarEstudianteComponent } from './profesor/agregar-estudiante/agregar-estudiante.component';
 import { AgregarPremioComponent } from './profesor/agregar-premio/agregar-premio.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 const RUTAS:Route[]=[
   { path: '', pathMatch: 'full', redirectTo: '/principal' },
@@ -119,6 +120,7 @@ const RUTAS:Route[]=[
     MatProgressBarModule,
     FormsModule,
     CommonModule,
+    MatDialogModule,
     RouterModule.forRoot(RUTAS)
   ],
   providers: [HttpClientModule],

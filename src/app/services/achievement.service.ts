@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { Achievement } from "../models/achievement.model";
+import { AchivementModel } from "../../model/achievement.model";
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
@@ -11,15 +11,15 @@ export class AchievementService {
 
   constructor(private http: HttpClient) { }
 
-  getAchivement():Observable<Achievement[]>{
-    return this.http.get <Achievement[]> (`${environment.url}/achivement`);
+  getAchivement():Observable<AchivementModel[]>{
+    return this.http.get <AchivementModel[]> (`${environment.url}/achivement`);
   }
 
-  getOne(id: string):Observable<Achievement>{
-    return this.http.get <Achievement> (`${environment.url}/achivement/${id}`);
+  getOne(id: string):Observable<AchivementModel>{
+    return this.http.get <AchivementModel> (`${environment.url}/achivement/${id}`);
   }
 
-  setAchivement( achievement: Achievement){
+  setAchivement( achievement: AchivementModel){
     return this.http.post (`${environment.url}/achivement`, achievement);
   }
 }

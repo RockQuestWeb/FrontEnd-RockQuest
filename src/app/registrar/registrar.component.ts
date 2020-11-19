@@ -23,6 +23,8 @@ export class RegistrarComponent implements OnInit {
 
   codeU = new FormControl('', [Validators.required]);
 
+  rank = new FormControl('', [Validators.required]);
+
   getErrorMessageEmail() {
     if (this.email.hasError('required')) {
       return 'componente obligatorio';
@@ -59,9 +61,10 @@ export class RegistrarComponent implements OnInit {
     newUser.password = this.password.value;
     newUser.name = this.name.value;
     newUser.universityCode = this.codeU.value;
-    if(this.email.value != "" && this.password.value != "" && this.codeU.value != "" && this.name.value != ""){
+    if(this.email.value != "" && this.password.value != "" && this.codeU.value != "" && this.name.value != "" && this.rank.value != ""){
 
       newUser.tickets = 0;
+      newUser.rank = this.rank.value;
       let newProgress: ProgressModel = new ProgressModel();
       this.progressService.setProgress(newProgress).subscribe(
         (res)=>{

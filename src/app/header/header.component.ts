@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
+import { UserModel } from 'src/model/user.model';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  user: UserModel
+
+  constructor() { 
+    this.updateLine();
+    setInterval(()=>{
+      this.updateLine();
+    }, 500);
+  }
+
+  updateLine(){
+    this.user = environment.user;
+  }
 
   ngOnInit(): void {
   }

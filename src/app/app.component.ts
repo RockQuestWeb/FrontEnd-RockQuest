@@ -9,5 +9,5 @@ import { GaleryService } from './services/galery.service';
   providers: [ GaleryService ]
 })
 export class AppComponent {
-  title = 'front';
+  title = 'Rock Quest Web';
 }

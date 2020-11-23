@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { from } from 'rxjs';
 import {PremiosModel} from './premios-model'
+import { PrizeService } from "../../../app/services/prize.service";
 
 @Component({
   selector: 'app-tabla-premios',
@@ -9,18 +10,23 @@ import {PremiosModel} from './premios-model'
 })
 export class TablaPremiosComponent implements OnInit {
 
-  listaPremios:PremiosModel[]=[
-    {nombrePremio:'llegarTarde',puntosPremio:25},
-    {nombrePremio:'Quiz',puntosPremio:40},
-    {nombrePremio:'Danny',puntosPremio:1000000},
-    {nombrePremio:'llegarTarde',puntosPremio:25},
-    {nombrePremio:'Quiz',puntosPremio:40},
-    {nombrePremio:'Danny',puntosPremio:1000000}
-  ]
+  listaPremios=[];
 
-  constructor() { }
+  constructor(private prizeService: PrizeService) { 
+    this.update()
+  }
 
   ngOnInit(): void {
   }
+
+  update(){
+    let data = this.prizeService.getPrize();
+    data.forEach(element => {
+      this.listaPremios.push(element);
+    });
+    console.log(this.listaPremios)
+  }
+
+
 
 }

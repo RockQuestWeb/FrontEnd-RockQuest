@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GaleryService } from 'src/app/services/galery.service';
 
 @Component({
   selector: 'app-contenedor-imagenes',
@@ -7,14 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContenedorImagenesComponent implements OnInit {
 
-  imagenes:String[];
+  imagenes;
 
-  constructor() { 
-    this.imagenes = new Array();
-    this.imagenes.push("https://ep01.epimg.net/elpais/imagenes/2019/10/30/album/1572424649_614672_1572453030_noticia_normal.jpg")
+  constructor(private galeryService: GaleryService) { 
+    this.imagenes = [];
+    this.loadImage();
   }
 
   ngOnInit(): void {
+  }
+
+  loadImage(){
+    let data = this.galeryService.getImage();
+    data.forEach(element => {
+      this.imagenes.push(element);
+      console.log(this.imagenes)
+    });
   }
 
 }

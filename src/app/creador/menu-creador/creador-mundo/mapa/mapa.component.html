@@ -27,8 +27,8 @@
                                     Imagenes
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
-                                    <div *ngFor="let image of images">
-                                        <a class="dropdown-item" (click)="ponerImagen(i,j,image)"><img src={{image}} width="50" height="50"></a>
+                                    <div *ngFor="let image of images[0]">
+                                        <a class="dropdown-item" (click)="ponerImagen(i,j,image.image)"><img src={{image.image}} width="50" height="50"></a>
                                     </div>
                                 </div>
                             </div> 

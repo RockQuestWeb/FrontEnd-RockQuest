@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GaleryService } from 'src/app/services/galery.service';
 
 @Component({
   selector: 'app-mapa',
@@ -10,17 +11,26 @@ export class MapaComponent implements OnInit {
   filas:number;
   columnas: number;
   mapa: String[][];
-  images: String[];
+  images;
 
-  constructor() {
+  constructor(private galeryService: GaleryService) {
     this.filas = 5;
     this.columnas = 5;
     this.mapa = [];
     this.llenarMapa();
-    this.images = ["https://i.pinimg.com/originals/af/8d/63/af8d63a477078732b79ff9d9fc60873f.jpg","https://i.pinimg.com/originals/af/8d/63/af8d63a477078732b79ff9d9fc60873f.jpg"];
+    this.images = [];
+    this.loadImage();
   }
 
   ngOnInit(): void {
+  }
+
+  loadImage(){
+    let data = this.galeryService.getImage();
+    data.forEach(element => {
+      this.images.push(element);
+      console.log(this.images)
+    });
   }
 
   llenarMapa(){

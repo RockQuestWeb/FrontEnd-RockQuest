@@ -7,19 +7,19 @@
                     <p class="h4">Premio:</p>
                     <mat-form-field appearance="fill" class="w-75">
                         <mat-label>nombre premio</mat-label>
-                        <input matInput>
+                        <input matInput [(ngModel)]="rewards">
                     </mat-form-field>
                 </div>
                 <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-content-center align-items-center">
                     <p class="h4 text-center">Puntos Necesarios:</p>
                     <mat-form-field appearance="fill" class="w-75">
                         <mat-label>puntos</mat-label>
-                        <input matInput type="number">
+                        <input matInput type="number" [(ngModel)]="tickets">
                     </mat-form-field>
                 </div>
 
                 <div class="col-12 d-flex flex-column justify-content-center align-content-center align-items-center">
-                    <button class="btn btn-success w-50 btn-lg">agregar</button>
+                    <button class="btn btn-success w-50 btn-lg" (click)="guardar()">agregar</button>
                 </div>
             </div>
         </div>

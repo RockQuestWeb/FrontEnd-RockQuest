@@ -8,9 +8,9 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let premios of listaPremios" class="table-light">
-                <td>{{premios.nombrePremio}}</td>
-                <td>{{premios.puntosPremio}}</td>
+            <tr *ngFor="let premios of listaPremios[0]" class="table-light">
+                <td>{{premios.rewards}}</td>
+                <td>{{premios.tickets}}</td>
             </tr>
         </tbody>
     </table>

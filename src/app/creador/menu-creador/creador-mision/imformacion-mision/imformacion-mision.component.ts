@@ -14,6 +14,9 @@ export class ImformacionMisionComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.listaMateria.forEach(element => {
+      this.listaMateria.push(element);
+    });
   }
 
 }

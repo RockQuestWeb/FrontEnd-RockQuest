@@ -21,6 +21,9 @@ export class TablaPremiosComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.listaPremios.forEach(element => {
+      this.listaPremios.push(element)
+    });
   }
 
 }

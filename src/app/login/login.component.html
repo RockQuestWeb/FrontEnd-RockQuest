@@ -16,7 +16,7 @@
             <div>
                 <mat-form-field appearance="fill">
                     <mat-label>Contraseña</mat-label>
-                    <input matInput placeholder="ejemplo: Dr212?121*" [formControl]="contrasena" required>
+                    <input matInput placeholder="ejemplo: Dr212?121*" [formControl]="contrasena" required type="password">
                     <mat-error *ngIf="contrasena.invalid">{{getErrorMessageContrasena()}}</mat-error>
                 </mat-form-field>
             </div>

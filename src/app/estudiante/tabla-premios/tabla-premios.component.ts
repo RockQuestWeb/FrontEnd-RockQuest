@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { from } from 'rxjs';
-import {PremiosModel} from './premios-model'
 import { PrizeService } from "../../../app/services/prize.service";
 
 @Component({
